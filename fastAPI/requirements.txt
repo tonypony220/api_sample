@@ -1,0 +1,8 @@
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+alembic==1.7.6
+SQLAlchemy==1.4.32
+Fastapi-pagination
+sqlalchemy-utils
+psycopg2-binary

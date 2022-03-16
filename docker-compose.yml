@@ -1,0 +1,29 @@
+version: '3'
+services:  
+  api:
+    build: ./fastAPI
+    ports:      
+        - 8081:80    
+    networks:
+      - host
+    restart: always
+    volumes:
+      - db:/db
+#  sql:
+#    image: mysql
+#    volumes:
+#      - db:/db
+#    restart: always
+#    networks:
+#      - host
+#    ports:
+#      - 3600:3600
+networks:
+  host:
+volumes:
+  db: 
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/home/db'
